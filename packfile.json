@@ -1,0 +1,2761 @@
+{
+  "SceneFilePhysicsV0": {
+    "shapeData": {
+      "type": "array",
+      "ref_type": "byte"
+    },
+    "shapes": {
+      "type": "array",
+      "ref_type": "SceneShapeV0"
+    },
+    "collisionShapes": {
+      "type": "array",
+      "ref_type": "SceneCollisionShapeV0"
+    },
+    "namedShapes": {
+      "type": "array",
+      "ref_type": "SceneNamedShapeV0"
+    }
+  },
+  "SceneMeshShapeV7": {
+    "indices": {
+      "type": "array",
+      "ref_type": "word"
+    },
+    "vertices": {
+      "type": "array",
+      "ref_type": "float3"
+    },
+    "moppInfo": "float4",
+    "moppBytes": {
+      "type": "array",
+      "ref_type": "byte"
+    }
+  },
+  "PackMapNavMeshExternalV0": {
+    "boundsMin": "float3",
+    "boundsMax": "float3",
+    "chunkDims": "dword2",
+    "chunkArray": {
+      "type": "array",
+      "ref_type": "PackMapNavMeshChunkExternalV0"
+    }
+  },
+  "SceneGameSurfaceV6": {
+    "tokens": {
+      "type": "array",
+      "ref_type": "qword"
+    }
+  },
+  "PackAssetManifestRecordV3": {
+    "baseId": "dword",
+    "fileId": "dword",
+    "size": "dword"
+  },
+  "byte": {
+    "": "byte"
+  },
+  "PackContentIndexEntry": {
+    "type": "dword",
+    "offset": "dword",
+    "namespaceIndex": "dword",
+    "rootIndex": "dword"
+  },
+  "PackAnimMachineV1": {
+    "states": {
+      "type": "array",
+      "ref_type": "PackAnimMachineStateV1"
+    }
+  },
+  "ModelFixedOffsetData": {
+    "name": "qword",
+    "parentBone": "qword",
+    "translation": "float3"
+  },
+  "SceneShapeSurfaceV4": {
+    "tokens": {
+      "type": "array",
+      "ref_type": "qword"
+    }
+  },
+  "SceneFilePhysicsV2": {
+    "shapeData": {
+      "type": "array",
+      "ref_type": "byte"
+    },
+    "shapes": {
+      "type": "array",
+      "ref_type": "SceneShapeV2"
+    },
+    "collisionShapes": {
+      "type": "array",
+      "ref_type": "SceneCollisionShapeV2"
+    },
+    "queryShapes": {
+      "type": "array",
+      "ref_type": "SceneQueryShapeV2"
+    },
+    "namedShapes": {
+      "type": "array",
+      "ref_type": "SceneNamedShapeV2"
+    },
+    "paths": {
+      "type": "array",
+      "ref_type": "ScenePathPhysicsV2"
+    }
+  },
+  "PackMapNavMeshMoverV3": {
+    "chunkIndex": "dword",
+    "mapPropId": "qword",
+    "navMeshData": {
+      "type": "array",
+      "ref_type": "byte"
+    },
+    "coarseGraphData": {
+      "type": "array",
+      "ref_type": "byte"
+    },
+    "mediatorData": {
+      "type": "array",
+      "ref_type": "byte"
+    }
+  },
+  "PackAnimIKChainGroupV0": {
+    "name": "qword",
+    "chains": {
+      "type": "array",
+      "ref_type": "PackAnimIKChainV0"
+    }
+  },
+  "SceneMotionV1": {
+    "keys": {
+      "type": "array",
+      "ref_type": "SceneKeyframeV1"
+    }
+  },
+  "SceneFileGameV3": {
+    "paths": {
+      "type": "array",
+      "ref_type": "ScenePathV3"
+    },
+    "meshes": {
+      "type": "array",
+      "ref_type": "SceneGameMeshV3"
+    },
+    "grabPoints": {
+      "type": "array",
+      "ref_type": "SceneGrabNodeV3"
+    }
+  },
+  "SceneCollisionShapeV0": {
+    "shapeIndex": "dword"
+  },
+  "PackAssetManifestStreamV3": {
+    "parentBaseId": "dword",
+    "streamBaseId": "dword"
+  },
+  "AsndFileDataV0": {
+    "voiceId": "dword",
+    "flags": "dword",
+    "reserved1": "dword",
+    "reserved2": "dword",
+    "length": "float",
+    "offset": "float",
+    "audioData": {
+      "type": "array",
+      "ref_type": "byte"
+    }
+  },
+  "PackMapNavMeshExternalV3": {
+    "boundsMin": "float3",
+    "boundsMax": "float3",
+    "chunkDims": "dword2",
+    "chunkArray": {
+      "type": "array",
+      "ref_type": "PackMapNavMeshChunkExternalV3"
+    },
+    "dynamicArray": {
+      "type": "array",
+      "ref_type": "PackMapNavMeshMoverV3"
+    }
+  },
+  "float3": {
+    "": "float3"
+  },
+  "PackAnimMachineTransitionVariantV0": {
+    "token": "qword",
+    "actionBlock": {
+      "type": "ptr",
+      "ref_type": "PackAnimMachineActionBlockV0"
+    }
+  },
+  "ScenePathV4": {
+    "properties": {
+      "type": "array",
+      "ref_type": "qword"
+    },
+    "points": {
+      "type": "array",
+      "ref_type": "ScenePathNodeV4"
+    },
+    "closed": "byte"
+  },
+  "PackMapNavMeshChunkExternalV0": {
+    "boundsMin": "float3",
+    "boundsMax": "float3",
+    "filename": "filename"
+  },
+  "PackMapBlockRecord": {
+    "filename": "filename"
+  },
+  "SceneActionPointV0": {
+    "name": "qword",
+    "motion": {
+      "type": "struct",
+      "ref_type": "SceneMotionV0"
+    }
+  },
+  "SceneGrabNodeV2": {
+    "position": "float3",
+    "rotation": "float4",
+    "radius": "float",
+    "flags": "dword",
+    "smoothing": "float"
+  },
+  "TextPackPasswords": {
+    "stringCount": "dword",
+    "passwords": {
+      "type": "array",
+      "ref_type": "TextPackPassword"
+    }
+  },
+  "TextPackVariant": {
+    "textId": "dword",
+    "variantTextIds": {
+      "type": "array",
+      "ref_type": "dword"
+    }
+  },
+  "SceneFileAnimationV0": {
+    "animations": {
+      "type": "array",
+      "ref_type": "SceneAnimationV0"
+    },
+    "imports": {
+      "type": "array",
+      "ref_type": "SceneAnimationImportV0"
+    }
+  },
+  "SceneFileAnimationV1": {
+    "animations": {
+      "type": "array",
+      "ref_type": "SceneAnimationV1"
+    },
+    "imports": {
+      "type": "array",
+      "ref_type": "SceneAnimationImportV1"
+    }
+  },
+  "SceneBoxShapeV8": {
+    "dimensions": "float3",
+    "position": "float3",
+    "rotation": "float4"
+  },
+  "PackAnimMachinesV0": {
+    "machines": {
+      "type": "array",
+      "ref_type": "PackAnimMachineV0"
+    },
+    "models": {
+      "type": "array",
+      "ref_type": "PackAnimModelV0"
+    }
+  },
+  "SceneShapeV0": {
+    "shapeOffset": "dword"
+  },
+  "SceneFilePhysicsV1": {
+    "shapeData": {
+      "type": "array",
+      "ref_type": "byte"
+    },
+    "shapes": {
+      "type": "array",
+      "ref_type": "SceneShapeV1"
+    },
+    "collisionShapes": {
+      "type": "array",
+      "ref_type": "SceneCollisionShapeV1"
+    },
+    "namedShapes": {
+      "type": "array",
+      "ref_type": "SceneNamedShapeV1"
+    },
+    "paths": {
+      "type": "array",
+      "ref_type": "ScenePathPhysicsV1"
+    }
+  },
+  "ModelFileGame": {
+    "gameData": {
+      "type": "array",
+      "ref_type": "byte"
+    }
+  },
+  "PackAssetManifestV0": {
+    "buildId": "dword",
+    "records": {
+      "type": "array",
+      "ref_type": "PackAssetManifestRecordV0"
+    }
+  },
+  "PackAssetManifestStreamV2": {
+    "parentBaseId": "dword",
+    "streamBaseId": "dword"
+  },
+  "SceneKeyframeV2": {
+    "time": "float",
+    "position": "float3",
+    "rotation": "float4"
+  },
+  "PackAnimMachineStateVariantV0": {
+    "token": "qword",
+    "actionBlock": {
+      "type": "ptr",
+      "ref_type": "PackAnimMachineActionBlockV0"
+    },
+    "actionVariantBlock": {
+      "type": "ptr",
+      "ref_type": "PackAnimMachineActionVariantBlockV0"
+    },
+    "transitions": {
+      "type": "array",
+      "ref_type": "PackAnimMachineTransitionV0"
+    }
+  },
+  "PackAnimSequenceTriggerV0": {
+    "trigger": "byte",
+    "time": "dword",
+    "flags": "dword"
+  },
+  "PackAnimMachineActionBlockV1": {
+    "actions": {
+      "type": "array",
+      "ref_type": "PackAnimMachineActionV1"
+    }
+  },
+  "dword": {
+    "": "dword"
+  },
+  "SceneAnimationImportV0": {
+    "filename": "filename",
+    "animNames": {
+      "type": "array",
+      "ref_type": "qword"
+    }
+  },
+  "PackAssetManifestStreamV1": {
+    "parentBaseId": "dword",
+    "streamBaseId": "dword"
+  },
+  "SceneTriggerShapeV3": {
+    "shapeIndex": "dword",
+    "flags": "dword"
+  },
+  "ScenePoseV2": {
+    "name": "qword",
+    "transforms": {
+      "type": "array",
+      "ref_type": "SceneTransformV2"
+    }
+  },
+  "ScenePathNodeV3": {
+    "position": "float3",
+    "rotation": "float4",
+    "radius": "float",
+    "flags": "dword",
+    "smoothing": "float"
+  },
+  "PackAssetManifestPropertyIndexV4": {
+    "baseId": "dword",
+    "properyIndex": "dword"
+  },
+  "ModelExpansionEmitterV2": {
+    "curl": "float",
+    "vortexSize": "float",
+    "curlQuality": "dword",
+    "curlFlags": "dword",
+    "fieldScale": "float"
+  },
+  "PackAssetManifestV4": {
+    "buildId": "dword",
+    "records": {
+      "type": "array",
+      "ref_type": "PackAssetManifestRecordV4"
+    },
+    "streams": {
+      "type": "array",
+      "ref_type": "PackAssetManifestStreamV4"
+    },
+    "options": {
+      "type": "array",
+      "ref_type": "PackAssetManifestOptionsV4"
+    },
+    "properties": {
+      "type": "array",
+      "ref_type": "PackAssetManifestPropertyV4"
+    },
+    "propertyTable": {
+      "type": "array",
+      "ref_type": "PackAssetManifestPropertyIndexV4"
+    }
+  },
+  "SceneSurfaceV8": {
+    "tokens": {
+      "type": "array",
+      "ref_type": "qword"
+    }
+  },
+  "ModelFileSnapPointV0": {
+    "bone": "qword"
+  },
+  "PackAnimModelV0": {
+    "modelFileId": "fileref",
+    "modelFileRaw": "wchar *",
+    "machineIndex": "dword"
+  },
+  "PackMapMetadata": {
+    "maps": {
+      "type": "array",
+      "ref_type": "PackMapMetadataMap"
+    }
+  },
+  "SceneShapeV4": {
+    "surfaces": {
+      "type": "array",
+      "ref_type": "byte"
+    }
+  },
+  "PackAnimSequenceChargeStageV0": {
+    "duration": "word",
+    "endingChargeLevel": "byte"
+  },
+  "SceneNamedShapeV5": {
+    "shapeIndex": "dword"
+  },
+  "SceneShapeSurfaceV5": {
+    "tokens": {
+      "type": "array",
+      "ref_type": "qword"
+    }
+  },
+  "SceneFilePhysicsV5": {
+    "surfaces": {
+      "type": "array",
+      "ref_type": "SceneShapeSurfaceV5"
+    },
+    "boxes": {
+      "type": "array",
+      "ref_type": "SceneBoxShapeV5"
+    },
+    "spheres": {
+      "type": "array",
+      "ref_type": "SceneSphereShapeV5"
+    },
+    "meshes": {
+      "type": "array",
+      "ref_type": "SceneMeshShapeV5"
+    },
+    "collisionShapes": {
+      "type": "array",
+      "ref_type": "SceneCollisionShapeV5"
+    },
+    "triggerShapes": {
+      "type": "array",
+      "ref_type": "SceneTriggerShapeV5"
+    },
+    "namedShapes": {
+      "type": "array",
+      "ref_type": "SceneNamedShapeV5"
+    }
+  },
+  "MapVariant": {
+    "file": "wchar *",
+    "name": "wchar *",
+    "token": "qword",
+    "flags": "dword"
+  },
+  "SceneMeshShapeV8": {
+    "indices": {
+      "type": "array",
+      "ref_type": "word"
+    },
+    "vertices": {
+      "type": "array",
+      "ref_type": "float3"
+    },
+    "moppInfo": "float4",
+    "moppBytes": {
+      "type": "array",
+      "ref_type": "byte"
+    },
+    "surfaces": {
+      "type": "array",
+      "ref_type": "byte"
+    }
+  },
+  "SceneGrabNodeV3": {
+    "position": "float3",
+    "rotation": "float4",
+    "radius": "float",
+    "flags": "dword",
+    "smoothing": "float"
+  },
+  "PackMapLayers": {
+    "props": {
+      "type": "array",
+      "ref_type": "PackMapLayerProp"
+    },
+    "lights": {
+      "type": "array",
+      "ref_type": "PackMapLayerLight"
+    },
+    "layers": {
+      "type": "array",
+      "ref_type": "PackMapLayer"
+    }
+  },
+  "SceneGameMeshV5": {
+    "indices": {
+      "type": "array",
+      "ref_type": "word"
+    },
+    "vertices": {
+      "type": "array",
+      "ref_type": "float3"
+    },
+    "edges": {
+      "type": "array",
+      "ref_type": "SceneEdgeV5"
+    },
+    "moppInfo": "float4",
+    "moppBytes": {
+      "type": "array",
+      "ref_type": "byte"
+    },
+    "surfaceFlags": {
+      "type": "array",
+      "ref_type": "dword"
+    }
+  },
+  "MapParam": {
+    "rect": "float4",
+    "flags": "dword",
+    "guid": "guid"
+  },
+  "CollideNavMesh": {
+    "boundsMin": "float3",
+    "boundsMax": "float3",
+    "chunkDims": "dword2",
+    "chunkRefArray": {
+      "type": "array",
+      "ref_type": "CollideNavMeshChunkRef"
+    }
+  },
+  "PackContentTypeInfo": {
+    "guidOffset": "dword",
+    "uidOffset": "dword",
+    "dataIdOffset": "dword",
+    "nameOffset": "dword",
+    "trackReferences": "byte"
+  },
+  "SceneFileGameV5": {
+    "paths": {
+      "type": "array",
+      "ref_type": "ScenePathV5"
+    },
+    "meshes": {
+      "type": "array",
+      "ref_type": "SceneGameMeshV5"
+    }
+  },
+  "PackContentFileIndexFixup": {
+    "relocOffset": "dword"
+  },
+  "SceneCollisionShapeV4": {
+    "shapeIndex": "dword"
+  },
+  "SceneGameMeshV3": {
+    "indices": {
+      "type": "array",
+      "ref_type": "word"
+    },
+    "vertices": {
+      "type": "array",
+      "ref_type": "float3"
+    },
+    "edges": {
+      "type": "array",
+      "ref_type": "SceneEdgeV3"
+    },
+    "moppInfo": "float4",
+    "moppBytes": {
+      "type": "array",
+      "ref_type": "byte"
+    },
+    "surfaceFlags": {
+      "type": "array",
+      "ref_type": "dword"
+    }
+  },
+  "SceneCollisionShapeV6": {
+    "shapeIndex": "dword"
+  },
+  "SceneAnimationEventV2": {
+    "name": "qword",
+    "time": "float"
+  },
+  "ScenePathNodeV4": {
+    "position": "float3",
+    "rotation": "float4",
+    "radius": "float",
+    "flags": "dword",
+    "smoothing": "float",
+    "singlesided": "byte"
+  },
+  "PackAssetManifestRecord": {
+    "baseId": "dword",
+    "fileId": "dword",
+    "size": "dword",
+    "flags": "dword"
+  },
+  "KeyEntry": {
+    "assetType": "dword",
+    "assetId": "dword",
+    "key": "qword"
+  },
+  "CollideNavMeshChunk": {
+    "navMeshData": {
+      "type": "array",
+      "ref_type": "byte"
+    },
+    "coarseGraphData": {
+      "type": "array",
+      "ref_type": "byte"
+    },
+    "queryMediatorMoppData": {
+      "type": "array",
+      "ref_type": "byte"
+    }
+  },
+  "PackAnimIKChainV0": {
+    "name": "qword",
+    "smoothWeight": "float3",
+    "hyperExtensionStart": "float",
+    "hyperExtensionScale": "float",
+    "bones": {
+      "type": "array",
+      "ref_type": "qword"
+    },
+    "targetRaycastInfo": {
+      "type": "ptr",
+      "ref_type": "PackAnimIKRaycastTargetV0"
+    },
+    "targetMode": "byte",
+    "chainType": "byte"
+  },
+  "SceneJointV2": {
+    "bones": {
+      "type": "array",
+      "size": 2,
+      "ref_type": "dword"
+    },
+    "pivots": {
+      "type": "array",
+      "size": 2,
+      "ref_type": "float3"
+    },
+    "twists": {
+      "type": "array",
+      "size": 2,
+      "ref_type": "float3"
+    },
+    "planes": {
+      "type": "array",
+      "size": 2,
+      "ref_type": "float3"
+    },
+    "coneLimit": "float",
+    "planeMin": "float",
+    "planeMax": "float",
+    "twistMin": "float",
+    "twistMax": "float"
+  },
+  "ModelFileExpansionV1": {
+    "snapPoints": {
+      "type": "array",
+      "ref_type": "ModelFileSnapPointV1"
+    },
+    "snapPointPriority": "float",
+    "emitters": {
+      "type": "array",
+      "ref_type": "ModelExpansionEmitterV1"
+    }
+  },
+  "BankLanguageDataV0": {
+    "bankFileName": {
+      "type": "array",
+      "ref_type": "BankFileNameDataV0"
+    }
+  },
+  "SceneCollisionShapeV2": {
+    "shapeIndex": "dword"
+  },
+  "SceneEdgeV1": {
+    "indices": {
+      "type": "array",
+      "size": 2,
+      "ref_type": "dword"
+    },
+    "triangles": {
+      "type": "array",
+      "ref_type": "dword"
+    }
+  },
+  "ScenePathNodeV5": {
+    "position": "float3",
+    "rotation": "float4",
+    "radius": "float",
+    "flags": "dword",
+    "smoothing": "float",
+    "singlesided": "byte"
+  },
+  "SceneBoneV1": {
+    "vertexA": "float3",
+    "vertexB": "float3",
+    "radius": "float",
+    "mass": "float"
+  },
+  "PackAssetManifestRecordV2": {
+    "baseId": "dword",
+    "fileId": "dword",
+    "size": "dword"
+  },
+  "SceneMotionV0": {
+    "keys": {
+      "type": "array",
+      "ref_type": "SceneKeyframeV0"
+    }
+  },
+  "SceneGameMeshV2": {
+    "indices": {
+      "type": "array",
+      "ref_type": "word"
+    },
+    "vertices": {
+      "type": "array",
+      "ref_type": "float3"
+    },
+    "edges": {
+      "type": "array",
+      "ref_type": "SceneEdgeV2"
+    },
+    "moppInfo": "float4",
+    "moppBytes": {
+      "type": "array",
+      "ref_type": "byte"
+    }
+  },
+  "TextPackVoices": {
+    "voices": {
+      "type": "array",
+      "ref_type": "TextPackVoice"
+    }
+  },
+  "ScenePathNodeV1": {
+    "position": "float3",
+    "rotation": "float4",
+    "radius": "float",
+    "flags": "dword",
+    "smoothing": "float"
+  },
+  "SceneAnimationImportV2": {
+    "filename": "filename",
+    "animNames": {
+      "type": "array",
+      "ref_type": "SceneImportSequenceV2"
+    },
+    "flags": "dword"
+  },
+  "qword": {
+    "": "qword"
+  },
+  "SceneEdgeV6": {
+    "indices": {
+      "type": "array",
+      "size": 2,
+      "ref_type": "dword"
+    },
+    "triangles": {
+      "type": "array",
+      "ref_type": "dword"
+    }
+  },
+  "BankFileDataV0": {
+    "reserved1": "dword",
+    "reserved2": "dword",
+    "asndFile": {
+      "type": "array",
+      "ref_type": "AsndFileDataV0"
+    }
+  },
+  "SceneFileGameV0": {
+    "paths": {
+      "type": "array",
+      "ref_type": "ScenePathV0"
+    },
+    "meshes": {
+      "type": "array",
+      "ref_type": "SceneGameMeshV0"
+    }
+  },
+  "ScenePathV1": {
+    "properties": {
+      "type": "array",
+      "ref_type": "qword"
+    },
+    "points": {
+      "type": "array",
+      "ref_type": "ScenePathNodeV1"
+    },
+    "closed": "byte"
+  },
+  "SceneQueryShapeV2": {
+    "shapeIndex": "dword"
+  },
+  "SceneGameMeshV1": {
+    "indices": {
+      "type": "array",
+      "ref_type": "word"
+    },
+    "vertices": {
+      "type": "array",
+      "ref_type": "float3"
+    },
+    "edges": {
+      "type": "array",
+      "ref_type": "SceneEdgeV1"
+    },
+    "moppInfo": "float4",
+    "moppBytes": {
+      "type": "array",
+      "ref_type": "byte"
+    }
+  },
+  "ScenePathV0": {
+    "properties": {
+      "type": "array",
+      "ref_type": "qword"
+    },
+    "points": {
+      "type": "array",
+      "ref_type": "ScenePathNodeV0"
+    },
+    "closed": "byte"
+  },
+  "PackMapMetadataMap": {
+    "mapId": "word",
+    "mapType": "byte"
+  },
+  "PackMapResourceMapNodeItemV1": {
+    "filename": "filename",
+    "type": "dword",
+    "permutation": "qword"
+  },
+  "MapSurfaceMeta": {
+    "index": "word",
+    "descriptor": "byte",
+    "data": "byte"
+  },
+  "PackAnimMachineStateV1": {
+    "name": "wchar *",
+    "actionBlock": {
+      "type": "ptr",
+      "ref_type": "PackAnimMachineActionBlockV1"
+    },
+    "actionVariantBlock": {
+      "type": "ptr",
+      "ref_type": "PackAnimMachineActionVariantBlockV1"
+    },
+    "transitions": {
+      "type": "array",
+      "ref_type": "PackAnimMachineTransitionV1"
+    },
+    "variants": {
+      "type": "array",
+      "ref_type": "PackAnimMachineStateVariantV1"
+    }
+  },
+  "PackAssetManifestPropertyIndexV5": {
+    "baseId": "dword",
+    "properyIndex": "dword"
+  },
+  "PackAnimSequencesV0": {
+    "sequences": {
+      "type": "array",
+      "ref_type": "PackAnimSequenceV0"
+    }
+  },
+  "PackContentTrackedReference": {
+    "sourceOffset": "dword",
+    "targetFileIndex": "dword",
+    "targetOffset": "dword"
+  },
+  "PackMapLayerProp": {
+    "guid": "qword",
+    "layerIds": {
+      "type": "array",
+      "ref_type": "dword"
+    }
+  },
+  "SceneAnimationV0": {
+    "name": "qword",
+    "motion": {
+      "type": "struct",
+      "ref_type": "SceneMotionV0"
+    },
+    "actionPoints": {
+      "type": "array",
+      "ref_type": "SceneActionPointV0"
+    }
+  },
+  "CollideModelManifest": {
+    "files": {
+      "type": "array",
+      "ref_type": "CollideModelManifestFile"
+    }
+  },
+  "SceneAnimationImportV1": {
+    "filename": "filename",
+    "animNames": {
+      "type": "array",
+      "ref_type": "qword"
+    }
+  },
+  "SceneNamedShapeV4": {
+    "shapeIndex": "dword"
+  },
+  "PackAssetExtraFile": {
+    "baseId": "dword",
+    "fileId": "dword",
+    "size": "dword",
+    "fileType": "dword"
+  },
+  "ScenePathNodeV2": {
+    "position": "float3",
+    "rotation": "float4",
+    "radius": "float",
+    "flags": "dword",
+    "smoothing": "float"
+  },
+  "MapSurfaces": {
+    "attributeData": {
+      "type": "array",
+      "ref_type": "MapSurfaceAttribute"
+    },
+    "toolData": {
+      "type": "array",
+      "ref_type": "MapSurfaceAttributeTool"
+    },
+    "terrainArray": {
+      "type": "array",
+      "ref_type": "MapSurfaceTerrainOverride"
+    },
+    "propArray": {
+      "type": "array",
+      "ref_type": "MapSurfacePropOverride"
+    }
+  },
+  "ModelFileExpansionV2": {
+    "snapPoints": {
+      "type": "array",
+      "ref_type": "ModelFileSnapPointV2"
+    },
+    "snapPointPriority": "float",
+    "emitters": {
+      "type": "array",
+      "ref_type": "ModelExpansionEmitterV2"
+    }
+  },
+  "SceneUnmappedBoneV1": {
+    "modelBoneIndex": "dword",
+    "sceneBoneIndex": "dword",
+    "localPose": {
+      "type": "array",
+      "size": 3,
+      "ref_type": "float4"
+    }
+  },
+  "SceneNamedShapeV1": {
+    "shapeIndex": "dword"
+  },
+  "PackAssetManifestPropertyV5": {
+    "type": "byte",
+    "data": {
+      "type": "array",
+      "ref_type": "byte"
+    }
+  },
+  "PackAnimSequenceV0": {
+    "sequence": "qword",
+    "animationData": {
+      "type": "array",
+      "ref_type": "PackAnimSequenceDataV0"
+    }
+  },
+  "MapSurfaceTerrainOverride": {
+    "chunkCoord": "dword2",
+    "overrideArray": {
+      "type": "array",
+      "ref_type": "MapSurfaceOverride"
+    }
+  },
+  "word": {
+    "": "word"
+  },
+  "BankFileNameDataV0": {
+    "fileName": "filename"
+  },
+  "SceneShapeSurfaceV6": {
+    "tokens": {
+      "type": "array",
+      "ref_type": "qword"
+    }
+  },
+  "PackEulaLanguageV0": {
+    "Language": "byte",
+    "Text": "wchar *"
+  },
+  "SceneBoneV2": {
+    "vertexA": "float3",
+    "vertexB": "float3",
+    "radius": "float",
+    "mass": "float"
+  },
+  "PackMapResourceMapNodeV0": {
+    "position": "float3",
+    "flags": "dword",
+    "itemArray": {
+      "type": "array",
+      "ref_type": "PackMapResourceMapNodeItemV0"
+    }
+  },
+  "PackAnimMachineActionV1": {
+    "actionData": {
+      "type": "array",
+      "size": 5,
+      "ref_type": "byte"
+    }
+  },
+  "PackMapNavMeshChunkExternalV3": {
+    "boundsMin": "float3",
+    "boundsMax": "float3",
+    "filename": "filename"
+  },
+  "SceneCapsuleShapeV8": {
+    "p0": "float3",
+    "p1": "float3",
+    "radius": "float"
+  },
+  "PackAssetManifestRecordV0": {
+    "baseId": "dword",
+    "fileId": "dword",
+    "size": "dword"
+  },
+  "PackAssetManifestRecordV5": {
+    "baseId": "dword",
+    "fileId": "dword",
+    "size": "dword",
+    "flags": "dword"
+  },
+  "ScenePathNodeV6": {
+    "position": "float3",
+    "rotation": "float4",
+    "flags": "dword",
+    "smoothing": "float",
+    "singlesided": "byte"
+  },
+  "ScenePathPhysicsV3": {
+    "pathData": {
+      "type": "array",
+      "ref_type": "float4"
+    }
+  },
+  "PackAnimMachinesV1": {
+    "machines": {
+      "type": "array",
+      "ref_type": "PackAnimMachineV1"
+    },
+    "models": {
+      "type": "array",
+      "ref_type": "PackAnimModelV1"
+    }
+  },
+  "MapSurfaceOverride": {
+    "surfaceId": "qword",
+    "bitArray": {
+      "type": "array",
+      "ref_type": "dword"
+    }
+  },
+  "dword4": {
+    "": "dword4"
+  },
+  "PackAssetManifestStream": {
+    "parentBaseId": "dword",
+    "streamBaseId": "dword"
+  },
+  "TextPackVoice": {
+    "textId": "dword",
+    "voiceId": "dword"
+  },
+  "PackAnimMachineTransitionVariantV1": {
+    "token": "qword",
+    "actionBlock": {
+      "type": "ptr",
+      "ref_type": "PackAnimMachineActionBlockV1"
+    }
+  },
+  "PackMapNavMeshMoverV2": {
+    "mapPropId": "qword",
+    "navMeshData": {
+      "type": "array",
+      "ref_type": "byte"
+    },
+    "coarseGraphData": {
+      "type": "array",
+      "ref_type": "byte"
+    },
+    "mediatorData": {
+      "type": "array",
+      "ref_type": "byte"
+    }
+  },
+  "SceneGrabNodeV4": {
+    "position": "float3",
+    "rotation": "float4",
+    "radius": "float",
+    "flags": "dword",
+    "smoothing": "float"
+  },
+  "KeyTableData": {
+    "keyEntryArr": {
+      "type": "array",
+      "ref_type": "KeyEntry"
+    }
+  },
+  "SceneFileGameV6": {
+    "paths": {
+      "type": "array",
+      "ref_type": "ScenePathV6"
+    },
+    "meshes": {
+      "type": "array",
+      "ref_type": "SceneGameMeshV6"
+    },
+    "surfaces": {
+      "type": "array",
+      "ref_type": "SceneGameSurfaceV6"
+    }
+  },
+  "PackAssetManifestOptionsV4": {
+    "baseId": "dword",
+    "fileId": "dword",
+    "flags": "dword"
+  },
+  "TextPackPassword": {
+    "textId": "dword",
+    "password": "qword"
+  },
+  "SceneFileGameV1": {
+    "paths": {
+      "type": "array",
+      "ref_type": "ScenePathV1"
+    },
+    "meshes": {
+      "type": "array",
+      "ref_type": "SceneGameMeshV1"
+    }
+  },
+  "ModelFileSnapPointV1": {
+    "bone": "qword"
+  },
+  "PackMapNavMeshExternalV2": {
+    "boundsMin": "float3",
+    "boundsMax": "float3",
+    "chunkDims": "dword2",
+    "chunkArray": {
+      "type": "array",
+      "ref_type": "PackMapNavMeshChunkExternalV2"
+    },
+    "dynamicArray": {
+      "type": "array",
+      "ref_type": "PackMapNavMeshMoverV2"
+    }
+  },
+  "SceneNamedShapeV2": {
+    "shapeIndex": "dword"
+  },
+  "SceneFileSkeletonV1": {
+    "bones": {
+      "type": "array",
+      "ref_type": "SceneBoneV1"
+    },
+    "joints": {
+      "type": "array",
+      "ref_type": "SceneJointV1"
+    },
+    "hingeJoints": {
+      "type": "array",
+      "ref_type": "SceneHingeJointV1"
+    },
+    "unmappedBones": {
+      "type": "array",
+      "ref_type": "SceneUnmappedBoneV1"
+    },
+    "ragdollToModel": {
+      "type": "array",
+      "ref_type": "dword"
+    },
+    "modelToRagdoll": {
+      "type": "array",
+      "ref_type": "dword"
+    }
+  },
+  "SceneTriggerShapeV6": {
+    "shapeIndex": "dword",
+    "flags": "dword"
+  },
+  "PackAssetRootManifest": {
+    "buildId": "dword",
+    "manifests": {
+      "type": "array",
+      "ref_type": "PackAssetManifestFile"
+    },
+    "extraFiles": {
+      "type": "array",
+      "ref_type": "PackAssetExtraFile"
+    }
+  },
+  "PackMapNavMeshChunkExternalV2": {
+    "boundsMin": "float3",
+    "boundsMax": "float3",
+    "filename": "filename"
+  },
+  "PackMapBlock": {
+    "blockDims": "dword2",
+    "blockRecordArray": {
+      "type": "array",
+      "ref_type": "PackMapBlockRecord"
+    }
+  },
+  "SceneEdgeV5": {
+    "indices": {
+      "type": "array",
+      "size": 2,
+      "ref_type": "dword"
+    },
+    "triangles": {
+      "type": "array",
+      "ref_type": "dword"
+    }
+  },
+  "PackAnimMachineActionVariantBlockV0": {
+    "actionVariants": {
+      "type": "array",
+      "ref_type": "PackAnimMachineActionVariantV0"
+    }
+  },
+  "PackAnimMachineV0": {
+    "states": {
+      "type": "array",
+      "ref_type": "PackAnimMachineStateV0"
+    }
+  },
+  "ReservedBankDataV2": {
+    "reserved1": "dword",
+    "reserved2": "dword",
+    "reserved3": "dword",
+    "reserved4": "dword"
+  },
+  "PackMapNavMeshChunkExternalV1": {
+    "boundsMin": "float3",
+    "boundsMax": "float3",
+    "filename": "filename"
+  },
+  "PackAnimIKRaycastTargetV0": {
+    "flags": "dword",
+    "direction": "float3"
+  },
+  "ScenePathPhysicsV2": {
+    "pathData": {
+      "type": "array",
+      "ref_type": "float4"
+    }
+  },
+  "SceneNamedShapeV3": {
+    "shapeIndex": "dword"
+  },
+  "MapSurfaceAttribute": {
+    "Id": "qword",
+    "Sound": "qword",
+    "flags": "dword"
+  },
+  "SceneActionPointV2": {
+    "name": "qword",
+    "motion": {
+      "type": "struct",
+      "ref_type": "SceneMotionV2"
+    }
+  },
+  "PackAssetManifestV5": {
+    "buildId": "dword",
+    "records": {
+      "type": "array",
+      "ref_type": "PackAssetManifestRecordV5"
+    },
+    "streams": {
+      "type": "array",
+      "ref_type": "PackAssetManifestStreamV5"
+    },
+    "properties": {
+      "type": "array",
+      "ref_type": "PackAssetManifestPropertyV5"
+    },
+    "propertyTable": {
+      "type": "array",
+      "ref_type": "PackAssetManifestPropertyIndexV5"
+    }
+  },
+  "PackAssetRootManifestV0": {
+    "buildId": "dword",
+    "extraFiles": {
+      "type": "array",
+      "ref_type": "PackAssetExtraFile"
+    }
+  },
+  "PackAnimMachineTransitionV0": {
+    "name": "wchar *",
+    "targetStateName": "wchar *",
+    "actionBlock": {
+      "type": "ptr",
+      "ref_type": "PackAnimMachineActionBlockV0"
+    },
+    "variants": {
+      "type": "array",
+      "ref_type": "PackAnimMachineTransitionVariantV0"
+    }
+  },
+  "PackAssetManifestPropertyV4": {
+    "type": "byte",
+    "data": {
+      "type": "array",
+      "ref_type": "byte"
+    }
+  },
+  "PackAnimMachineActionVariantBlockV1": {
+    "actionVariants": {
+      "type": "array",
+      "ref_type": "PackAnimMachineActionVariantV1"
+    }
+  },
+  "PackAnimSequenceDataV0": {
+    "token": "qword",
+    "flags": "dword",
+    "blendInTime": "float",
+    "blendOutTime": "float",
+    "chargeStages": {
+      "type": "array",
+      "ref_type": "PackAnimSequenceChargeStageV0"
+    },
+    "steps": {
+      "type": "array",
+      "ref_type": "PackAnimSequenceStepV0"
+    },
+    "triggers": {
+      "type": "array",
+      "ref_type": "PackAnimSequenceTriggerV0"
+    }
+  },
+  "ModelFileSnapPointV2": {
+    "bone": "qword",
+    "shape": "qword"
+  },
+  "SceneShapeV1": {
+    "shapeOffset": "dword"
+  },
+  "SceneBoxShapeV7": {
+    "dimensions": "float3",
+    "position": "float3",
+    "rotation": "float4"
+  },
+  "SceneGameMeshV0": {
+    "indices": {
+      "type": "array",
+      "ref_type": "word"
+    },
+    "vertices": {
+      "type": "array",
+      "ref_type": "float3"
+    },
+    "edges": {
+      "type": "array",
+      "ref_type": "SceneEdgeV0"
+    },
+    "moppInfo": "float4",
+    "moppBytes": {
+      "type": "array",
+      "ref_type": "byte"
+    }
+  },
+  "ModelFileProperties": {
+    "fixedOffsetData": {
+      "type": "array",
+      "ref_type": "ModelFixedOffsetData"
+    },
+    "properties": {
+      "type": "array",
+      "ref_type": "ModelPropertyData"
+    }
+  },
+  "PackAssetManifestStreamV4": {
+    "parentBaseId": "dword",
+    "streamBaseId": "dword"
+  },
+  "BankIndexDataV0": {
+    "bankLanguage": {
+      "type": "array",
+      "ref_type": "BankLanguageDataV0"
+    }
+  },
+  "SceneShapeV2": {
+    "shapeOffset": "dword"
+  },
+  "SceneMeshShapeV6": {
+    "surfaces": {
+      "type": "array",
+      "ref_type": "byte"
+    },
+    "indices": {
+      "type": "array",
+      "ref_type": "word"
+    },
+    "vertices": {
+      "type": "array",
+      "ref_type": "float3"
+    },
+    "moppInfo": "float4",
+    "moppBytes": {
+      "type": "array",
+      "ref_type": "byte"
+    }
+  },
+  "SceneCapsuleShapeV7": {
+    "p0": "float3",
+    "p1": "float3",
+    "radius": "float"
+  },
+  "PackMapLayerLight": {
+    "guid": "qword",
+    "layerIds": {
+      "type": "array",
+      "ref_type": "dword"
+    }
+  },
+  "PackAssetManifestPropertyIndex": {
+    "baseId": "dword",
+    "properyIndex": "dword"
+  },
+  "PackContentNamespace": {
+    "name": "wchar *",
+    "domain": "dword",
+    "parentIndex": "dword"
+  },
+  "PackContentStringIndexFixup": {
+    "relocOffset": "dword"
+  },
+  "SceneCollisionShapeV5": {
+    "shapeIndex": "dword"
+  },
+  "SceneFileGameV2": {
+    "paths": {
+      "type": "array",
+      "ref_type": "ScenePathV2"
+    },
+    "meshes": {
+      "type": "array",
+      "ref_type": "SceneGameMeshV2"
+    },
+    "grabPoints": {
+      "type": "array",
+      "ref_type": "SceneGrabNodeV2"
+    }
+  },
+  "PackMapResourceMapV1": {
+    "nodeArray": {
+      "type": "array",
+      "ref_type": "PackMapResourceMapNodeV1"
+    }
+  },
+  "SceneShapeV3": {
+    "surfaces": {
+      "type": "array",
+      "ref_type": "byte"
+    }
+  },
+  "SceneBoxShapeV6": {
+    "surface": "byte",
+    "dimensions": "float3",
+    "position": "float3",
+    "rotation": "float4"
+  },
+  "SceneHingeJointV1": {
+    "bones": {
+      "type": "array",
+      "size": 2,
+      "ref_type": "dword"
+    },
+    "pivots": {
+      "type": "array",
+      "size": 2,
+      "ref_type": "float3"
+    },
+    "hinges": {
+      "type": "array",
+      "size": 2,
+      "ref_type": "float3"
+    },
+    "normals": {
+      "type": "array",
+      "size": 2,
+      "ref_type": "float3"
+    },
+    "limitMin": "float",
+    "limitMax": "float"
+  },
+  "PackAnimMachineActionVariantV1": {
+    "token": "qword",
+    "actionBlock": {
+      "type": "ptr",
+      "ref_type": "PackAnimMachineActionBlockV1"
+    }
+  },
+  "SceneEdgeV3": {
+    "indices": {
+      "type": "array",
+      "size": 2,
+      "ref_type": "dword"
+    },
+    "triangles": {
+      "type": "array",
+      "ref_type": "dword"
+    }
+  },
+  "PackAssetManifestFile": {
+    "baseId": "dword",
+    "fileId": "dword",
+    "size": "dword",
+    "flags": "dword",
+    "name": "wchar *"
+  },
+  "SceneEdgeV2": {
+    "indices": {
+      "type": "array",
+      "size": 2,
+      "ref_type": "dword"
+    },
+    "triangles": {
+      "type": "array",
+      "ref_type": "dword"
+    }
+  },
+  "PackAnimModelV1": {
+    "modelFileId": "fileref",
+    "modelFileRaw": "wchar *",
+    "machineIndex": "dword",
+    "listeners": "guid"
+  },
+  "SceneEdgeV0": {
+    "indices": {
+      "type": "array",
+      "size": 2,
+      "ref_type": "dword"
+    },
+    "triangles": {
+      "type": "array",
+      "ref_type": "dword"
+    }
+  },
+  "PackAnimAimIKBoneV0": {
+    "boneToken": "qword",
+    "clampAngle": "float",
+    "weight": "float",
+    "smoothingWeight": "float"
+  },
+  "SceneGameMeshV4": {
+    "indices": {
+      "type": "array",
+      "ref_type": "word"
+    },
+    "vertices": {
+      "type": "array",
+      "ref_type": "float3"
+    },
+    "edges": {
+      "type": "array",
+      "ref_type": "SceneEdgeV4"
+    },
+    "moppInfo": "float4",
+    "moppBytes": {
+      "type": "array",
+      "ref_type": "byte"
+    },
+    "surfaceFlags": {
+      "type": "array",
+      "ref_type": "dword"
+    }
+  },
+  "PackAnimMachineTransitionV1": {
+    "name": "wchar *",
+    "targetStateName": "wchar *",
+    "actionBlock": {
+      "type": "ptr",
+      "ref_type": "PackAnimMachineActionBlockV1"
+    },
+    "variants": {
+      "type": "array",
+      "ref_type": "PackAnimMachineTransitionVariantV1"
+    }
+  },
+  "PackAssetManifestOptionsV3": {
+    "baseId": "dword",
+    "fileId": "dword",
+    "flags": "dword"
+  },
+  "PackAssetManifestV2": {
+    "buildId": "dword",
+    "records": {
+      "type": "array",
+      "ref_type": "PackAssetManifestRecordV2"
+    },
+    "streams": {
+      "type": "array",
+      "ref_type": "PackAssetManifestStreamV2"
+    },
+    "noDeltaRecords": {
+      "type": "array",
+      "ref_type": "PackAssetManifestRecordV2"
+    }
+  },
+  "MapPackage": {
+    "baseFile": "filename",
+    "variants": {
+      "type": "array",
+      "ref_type": "MapVariant"
+    },
+    "flags": "dword"
+  },
+  "SceneImportSequenceV2": {
+    "name": "qword"
+  },
+  "MapSurfacePropOverride": {
+    "propId": "qword",
+    "overrideArray": {
+      "type": "array",
+      "ref_type": "MapSurfaceOverride"
+    }
+  },
+  "MapOcclusionTome": {
+    "enableTomeQueries": "dword",
+    "tome": {
+      "type": "array",
+      "ref_type": "byte"
+    },
+    "propIDMap": {
+      "type": "array",
+      "ref_type": "byte"
+    },
+    "reserved": {
+      "type": "array",
+      "ref_type": "byte"
+    }
+  },
+  "PackMapToolFsV0": {
+    "filePtr": {
+      "type": "array",
+      "ref_type": "PackMapToolFsFileV0"
+    }
+  },
+  "PackAnimMachineStateV0": {
+    "name": "wchar *",
+    "actionBlock": {
+      "type": "ptr",
+      "ref_type": "PackAnimMachineActionBlockV0"
+    },
+    "actionVariantBlock": {
+      "type": "ptr",
+      "ref_type": "PackAnimMachineActionVariantBlockV0"
+    },
+    "transitions": {
+      "type": "array",
+      "ref_type": "PackAnimMachineTransitionV0"
+    },
+    "variants": {
+      "type": "array",
+      "ref_type": "PackAnimMachineStateVariantV0"
+    }
+  },
+  "SceneFilePhysicsV6": {
+    "surfaces": {
+      "type": "array",
+      "ref_type": "SceneShapeSurfaceV6"
+    },
+    "boxes": {
+      "type": "array",
+      "ref_type": "SceneBoxShapeV6"
+    },
+    "spheres": {
+      "type": "array",
+      "ref_type": "SceneSphereShapeV6"
+    },
+    "capsules": {
+      "type": "array",
+      "ref_type": "SceneCapsuleShapeV6"
+    },
+    "meshes": {
+      "type": "array",
+      "ref_type": "SceneMeshShapeV6"
+    },
+    "collisionShapes": {
+      "type": "array",
+      "ref_type": "SceneCollisionShapeV6"
+    },
+    "triggerShapes": {
+      "type": "array",
+      "ref_type": "SceneTriggerShapeV6"
+    },
+    "namedShapes": {
+      "type": "array",
+      "ref_type": "SceneNamedShapeV6"
+    }
+  },
+  "ModelFileSnapPointV3": {
+    "bone": "qword",
+    "shape": "qword",
+    "flags": "dword"
+  },
+  "SceneBoxShapeV5": {
+    "surface": "byte",
+    "dimensions": "float3",
+    "position": "float3",
+    "rotation": "float4"
+  },
+  "SceneNamedShapeV0": {
+    "shapeIndex": "dword"
+  },
+  "TextPackLanguage": {
+    "filenames": {
+      "type": "array",
+      "ref_type": "filename"
+    }
+  },
+  "ModelFileExpansionV3": {
+    "snapPoints": {
+      "type": "array",
+      "ref_type": "ModelFileSnapPointV3"
+    },
+    "snapPointPriority": "float",
+    "emitters": {
+      "type": "array",
+      "ref_type": "ModelExpansionEmitterV3"
+    }
+  },
+  "SceneJointV1": {
+    "bones": {
+      "type": "array",
+      "size": 2,
+      "ref_type": "dword"
+    },
+    "pivots": {
+      "type": "array",
+      "size": 2,
+      "ref_type": "float3"
+    },
+    "twists": {
+      "type": "array",
+      "size": 2,
+      "ref_type": "float3"
+    },
+    "planes": {
+      "type": "array",
+      "size": 2,
+      "ref_type": "float3"
+    },
+    "coneLimit": "float",
+    "planeMin": "float",
+    "planeMax": "float",
+    "twistMin": "float",
+    "twistMax": "float"
+  },
+  "ModelExpansionEmitterV0": {
+    "curl": "float",
+    "vortexSize": "float"
+  },
+  "PackAssetManifestRecordV4": {
+    "baseId": "dword",
+    "fileId": "dword",
+    "size": "dword",
+    "flags": "dword"
+  },
+  "float": {
+    "": "float"
+  },
+  "AsndFileDataV2": {
+    "voiceId": "dword",
+    "flags": "dword",
+    "reserved1": "dword",
+    "reserved2": "dword",
+    "reserved3": "dword",
+    "reserved4": "dword",
+    "length": "float",
+    "offset": "float",
+    "reserved5": "byte",
+    "reserved6": "byte",
+    "reserved7": "byte",
+    "reserved8": "byte",
+    "audioData": {
+      "type": "array",
+      "ref_type": "byte"
+    }
+  },
+  "AsndFileDataV1": {
+    "voiceId": "dword",
+    "flags": "dword",
+    "reserved1": "dword",
+    "reserved2": "dword",
+    "length": "float",
+    "offset": "float",
+    "audioData": {
+      "type": "array",
+      "ref_type": "byte"
+    }
+  },
+  "PackMapResourceMapNodeItemV0": {
+    "filename": "filename",
+    "type": "dword"
+  },
+  "ModelPropertyData": {
+    "id": "qword",
+    "type": "dword",
+    "mergeIndex": "dword",
+    "time": "float",
+    "val": "qword",
+    "strVal": "filename"
+  },
+  "SceneFilePhysicsV8": {
+    "boxes": {
+      "type": "array",
+      "ref_type": "SceneBoxShapeV8"
+    },
+    "spheres": {
+      "type": "array",
+      "ref_type": "SceneSphereShapeV8"
+    },
+    "capsules": {
+      "type": "array",
+      "ref_type": "SceneCapsuleShapeV8"
+    },
+    "meshes": {
+      "type": "array",
+      "ref_type": "SceneMeshShapeV8"
+    },
+    "surfaces": {
+      "type": "array",
+      "ref_type": "SceneSurfaceV8"
+    }
+  },
+  "float4": {
+    "": "float4"
+  },
+  "SceneEdgeV4": {
+    "indices": {
+      "type": "array",
+      "size": 2,
+      "ref_type": "dword"
+    },
+    "triangles": {
+      "type": "array",
+      "ref_type": "dword"
+    }
+  },
+  "PackMapResourceMapNodeV1": {
+    "position": "float3",
+    "flags": "dword",
+    "itemArray": {
+      "type": "array",
+      "ref_type": "PackMapResourceMapNodeItemV1"
+    }
+  },
+  "SceneFileSkeletonV2": {
+    "bones": {
+      "type": "array",
+      "ref_type": "SceneBoneV2"
+    },
+    "joints": {
+      "type": "array",
+      "ref_type": "SceneJointV2"
+    },
+    "hingeJoints": {
+      "type": "array",
+      "ref_type": "SceneHingeJointV2"
+    },
+    "ragdollToModel": {
+      "type": "array",
+      "ref_type": "dword"
+    }
+  },
+  "PackMapToolFsFileV0": {
+    "filename": "fileref",
+    "time": "qword",
+    "dataPtr": {
+      "type": "array",
+      "ref_type": "byte"
+    }
+  },
+  "PackAssetManifestStreamV5": {
+    "parentBaseId": "dword",
+    "streamBaseId": "dword"
+  },
+  "SceneFilePhysicsV7": {
+    "boxes": {
+      "type": "array",
+      "ref_type": "SceneBoxShapeV7"
+    },
+    "spheres": {
+      "type": "array",
+      "ref_type": "SceneSphereShapeV7"
+    },
+    "capsules": {
+      "type": "array",
+      "ref_type": "SceneCapsuleShapeV7"
+    },
+    "meshes": {
+      "type": "array",
+      "ref_type": "SceneMeshShapeV7"
+    }
+  },
+  "PackAnimSequenceStepV0": {
+    "type": "byte",
+    "animationSpeed": "float",
+    "flags": "dword",
+    "action": {
+      "type": "ptr",
+      "ref_type": "PackAnimSequenceStepActionV0"
+    },
+    "move": {
+      "type": "ptr",
+      "ref_type": "PackAnimSequenceStepMoveV0"
+    }
+  },
+  "PackContentLocalOffsetFixup": {
+    "relocOffset": "dword"
+  },
+  "SceneMotionV2": {
+    "keys": {
+      "type": "array",
+      "ref_type": "SceneKeyframeV2"
+    }
+  },
+  "SceneAnimationV2": {
+    "name": "qword",
+    "motion": {
+      "type": "struct",
+      "ref_type": "SceneMotionV2"
+    },
+    "actionPoints": {
+      "type": "array",
+      "ref_type": "SceneActionPointV2"
+    },
+    "events": {
+      "type": "array",
+      "ref_type": "SceneAnimationEventV2"
+    }
+  },
+  "TextPackVariants": {
+    "variants": {
+      "type": "array",
+      "ref_type": "TextPackVariant"
+    }
+  },
+  "PackAssetManifestV1": {
+    "buildId": "dword",
+    "records": {
+      "type": "array",
+      "ref_type": "PackAssetManifestRecordV1"
+    },
+    "streams": {
+      "type": "array",
+      "ref_type": "PackAssetManifestStreamV1"
+    }
+  },
+  "SceneAnimationV1": {
+    "name": "qword",
+    "motion": {
+      "type": "struct",
+      "ref_type": "SceneMotionV1"
+    },
+    "actionPoints": {
+      "type": "array",
+      "ref_type": "SceneActionPointV1"
+    },
+    "events": {
+      "type": "array",
+      "ref_type": "SceneAnimationEventV1"
+    }
+  },
+  "SceneSphereShapeV6": {
+    "surface": "byte",
+    "center": "float3",
+    "radius": "float"
+  },
+  "SceneFileSkeletonV0": {
+    "bones": {
+      "type": "array",
+      "ref_type": "SceneBoneV0"
+    },
+    "joints": {
+      "type": "array",
+      "ref_type": "SceneJointV0"
+    },
+    "unmappedBones": {
+      "type": "array",
+      "ref_type": "SceneUnmappedBoneV0"
+    },
+    "ragdollToModel": {
+      "type": "array",
+      "ref_type": "dword"
+    },
+    "modelToRagdoll": {
+      "type": "array",
+      "ref_type": "dword"
+    }
+  },
+  "SceneKeyframeV0": {
+    "time": "float",
+    "position": "float3",
+    "rotation": "float4"
+  },
+  "CollideNavMeshChunkRef": {
+    "boundsMin": "float3",
+    "boundsMax": "float3",
+    "chunkFilename": "filename"
+  },
+  "PackAnimSequenceStepActionV0": {
+    "duration": "dword"
+  },
+  "PackAnimAimIKConfigV0": {
+    "name": "qword",
+    "boneEye": "qword",
+    "boneSight": "qword",
+    "endEffector": "qword",
+    "frustumHAngle": "float",
+    "frustumVAngle": "float",
+    "frustumLength": "float",
+    "targetVelocityConstraint": "float",
+    "bones": {
+      "type": "array",
+      "ref_type": "PackAnimAimIKBoneV0"
+    },
+    "targets": {
+      "type": "array",
+      "ref_type": "qword"
+    },
+    "flags": "byte"
+  },
+  "wchar *": {
+    "": "wchar *"
+  },
+  "PackEulaV0": {
+    "Language": {
+      "type": "array",
+      "ref_type": "PackEulaLanguageV0"
+    },
+    "Version": "byte"
+  },
+  "SceneCapsuleShapeV6": {
+    "surface": "byte",
+    "p0": "float3",
+    "p1": "float3",
+    "radius": "float"
+  },
+  "BankFileDataV1": {
+    "reserved1": "dword",
+    "reserved2": "dword",
+    "asndFile": {
+      "type": "array",
+      "ref_type": "AsndFileDataV1"
+    }
+  },
+  "SceneAnimationEventV1": {
+    "name": "qword",
+    "time": "float"
+  },
+  "SceneTransformV2": {
+    "name": "qword",
+    "translation": "float3",
+    "rotation": "float4"
+  },
+  "ScenePathV3": {
+    "properties": {
+      "type": "array",
+      "ref_type": "qword"
+    },
+    "points": {
+      "type": "array",
+      "ref_type": "ScenePathNodeV3"
+    },
+    "closed": "byte"
+  },
+  "SceneUnmappedBoneV0": {
+    "modelBoneIndex": "dword",
+    "sceneBoneIndex": "dword",
+    "localPose": {
+      "type": "array",
+      "size": 3,
+      "ref_type": "float4"
+    }
+  },
+  "PackAssetManifestV3": {
+    "buildId": "dword",
+    "records": {
+      "type": "array",
+      "ref_type": "PackAssetManifestRecordV3"
+    },
+    "streams": {
+      "type": "array",
+      "ref_type": "PackAssetManifestStreamV3"
+    },
+    "options": {
+      "type": "array",
+      "ref_type": "PackAssetManifestOptionsV3"
+    }
+  },
+  "SceneKeyframeV1": {
+    "time": "float",
+    "position": "float3",
+    "rotation": "float4"
+  },
+  "SceneBoneV3": {
+    "vertexA": "float3",
+    "vertexB": "float3",
+    "radius": "float",
+    "mass": "float",
+    "name": "qword"
+  },
+  "SceneFileAnimationV2": {
+    "animations": {
+      "type": "array",
+      "ref_type": "SceneAnimationV2"
+    },
+    "poses": {
+      "type": "array",
+      "ref_type": "ScenePoseV2"
+    },
+    "imports": {
+      "type": "array",
+      "ref_type": "SceneAnimationImportV2"
+    }
+  },
+  "SceneFileSkeletonV3": {
+    "bones": {
+      "type": "array",
+      "ref_type": "SceneBoneV3"
+    },
+    "joints": {
+      "type": "array",
+      "ref_type": "SceneJointV3"
+    },
+    "hingeJoints": {
+      "type": "array",
+      "ref_type": "SceneHingeJointV3"
+    },
+    "ragdollToModel": {
+      "type": "array",
+      "ref_type": "dword"
+    }
+  },
+  "PackAnimFallbackV0": {
+    "sourceAnim": "qword",
+    "targetAnims": {
+      "type": "array",
+      "ref_type": "qword"
+    }
+  },
+  "PackAnimMachineActionVariantV0": {
+    "token": "qword",
+    "actionBlock": {
+      "type": "ptr",
+      "ref_type": "PackAnimMachineActionBlockV0"
+    }
+  },
+  "ModelExpansionEmitterV1": {
+    "curl": "float",
+    "vortexSize": "float",
+    "curlQuality": "dword",
+    "curlFlags": "dword",
+    "fieldScale": "float"
+  },
+  "SceneTriggerShapeV5": {
+    "shapeIndex": "dword",
+    "flags": "dword"
+  },
+  "ScenePathV2": {
+    "properties": {
+      "type": "array",
+      "ref_type": "qword"
+    },
+    "points": {
+      "type": "array",
+      "ref_type": "ScenePathNodeV2"
+    },
+    "closed": "byte"
+  },
+  "ScenePathV6": {
+    "properties": {
+      "type": "array",
+      "ref_type": "qword"
+    },
+    "points": {
+      "type": "array",
+      "ref_type": "ScenePathNodeV6"
+    },
+    "closed": "byte"
+  },
+  "PackAssetManifestRecordV1": {
+    "baseId": "dword",
+    "fileId": "dword",
+    "size": "dword"
+  },
+  "SceneSphereShapeV8": {
+    "center": "float3",
+    "radius": "float"
+  },
+  "SceneTriggerShapeV4": {
+    "shapeIndex": "dword",
+    "flags": "dword"
+  },
+  "PackMapNavMeshExternalV1": {
+    "boundsMin": "float3",
+    "boundsMax": "float3",
+    "chunkDims": "dword2",
+    "chunkArray": {
+      "type": "array",
+      "ref_type": "PackMapNavMeshChunkExternalV1"
+    }
+  },
+  "CollideModelManifestFile": {
+    "modelFileStr": "wchar *",
+    "modelFile": "fileref",
+    "collisionFile": "fileref",
+    "scales": {
+      "type": "array",
+      "ref_type": "float"
+    }
+  },
+  "ModelExpansionEmitterV3": {
+    "curl": "float",
+    "vortexSize": "float",
+    "curlQuality": "dword",
+    "curlFlags": "dword",
+    "fieldScale": "float"
+  },
+  "SceneActionPointV1": {
+    "name": "qword",
+    "motion": {
+      "type": "struct",
+      "ref_type": "SceneMotionV1"
+    }
+  },
+  "SceneBoneV0": {
+    "vertexA": "float3",
+    "vertexB": "float3",
+    "radius": "float",
+    "mass": "float"
+  },
+  "PackContentExternalOffsetFixup": {
+    "relocOffset": "dword",
+    "targetFileIndex": "dword"
+  },
+  "SceneMeshShapeV5": {
+    "surfaces": {
+      "type": "array",
+      "ref_type": "byte"
+    },
+    "indices": {
+      "type": "array",
+      "ref_type": "word"
+    },
+    "vertices": {
+      "type": "array",
+      "ref_type": "float3"
+    },
+    "moppInfo": "float4",
+    "moppBytes": {
+      "type": "array",
+      "ref_type": "byte"
+    }
+  },
+  "PackMapLayer": {
+    "layerId": "dword",
+    "metaData": {
+      "type": "array",
+      "ref_type": "dword4"
+    }
+  },
+  "MapSurfaceChunk": {
+    "coord": {
+      "type": "array",
+      "size": 3,
+      "ref_type": "dword"
+    },
+    "metadata": {
+      "type": "array",
+      "ref_type": "MapSurfaceMeta"
+    },
+    "typeData": {
+      "type": "array",
+      "ref_type": "byte"
+    }
+  },
+  "SceneFileGameV4": {
+    "paths": {
+      "type": "array",
+      "ref_type": "ScenePathV4"
+    },
+    "meshes": {
+      "type": "array",
+      "ref_type": "SceneGameMeshV4"
+    },
+    "grabPoints": {
+      "type": "array",
+      "ref_type": "SceneGrabNodeV4"
+    }
+  },
+  "SceneGameMeshV6": {
+    "indices": {
+      "type": "array",
+      "ref_type": "word"
+    },
+    "vertices": {
+      "type": "array",
+      "ref_type": "float3"
+    },
+    "edges": {
+      "type": "array",
+      "ref_type": "SceneEdgeV6"
+    },
+    "moppInfo": "float4",
+    "moppBytes": {
+      "type": "array",
+      "ref_type": "byte"
+    },
+    "surfaces": {
+      "type": "array",
+      "ref_type": "byte"
+    }
+  },
+  "TextPackManifest": {
+    "stringsPerFile": "dword",
+    "languages": {
+      "type": "array",
+      "ref_type": "TextPackLanguage"
+    }
+  },
+  "filename": {
+    "": "filename"
+  },
+  "fileref": {
+    "": "fileref"
+  },
+  "ModelFileIcon": {
+    "jpgData": {
+      "type": "array",
+      "ref_type": "byte"
+    }
+  },
+  "SceneShapeSurfaceV3": {
+    "tokens": {
+      "type": "array",
+      "ref_type": "qword"
+    }
+  },
+  "SceneSphereShapeV7": {
+    "center": "float3",
+    "radius": "float"
+  },
+  "PackAssetManifestProperty": {
+    "type": "byte",
+    "data": {
+      "type": "array",
+      "ref_type": "byte"
+    }
+  },
+  "SceneCollisionShapeV1": {
+    "shapeIndex": "dword"
+  },
+  "PackAssetManifest": {
+    "buildId": "dword",
+    "totalRecordSize": "qword",
+    "records": {
+      "type": "array",
+      "ref_type": "PackAssetManifestRecord"
+    },
+    "streams": {
+      "type": "array",
+      "ref_type": "PackAssetManifestStream"
+    },
+    "properties": {
+      "type": "array",
+      "ref_type": "PackAssetManifestProperty"
+    },
+    "propertyTable": {
+      "type": "array",
+      "ref_type": "PackAssetManifestPropertyIndex"
+    }
+  },
+  "PackAnimConfigV0": {
+    "aimIKConfigs": {
+      "type": "array",
+      "ref_type": "PackAnimAimIKConfigV0"
+    },
+    "chainGroups": {
+      "type": "array",
+      "ref_type": "PackAnimIKChainGroupV0"
+    }
+  },
+  "PackMapResourceMapV0": {
+    "nodeArray": {
+      "type": "array",
+      "ref_type": "PackMapResourceMapNodeV0"
+    }
+  },
+  "MapSurfaceAttributeTool": {
+    "name": "wchar *",
+    "category": "wchar *",
+    "color": "byte4"
+  },
+  "SceneNamedShapeV6": {
+    "shapeIndex": "dword"
+  },
+  "BankFileDataV2": {
+    "reserved1": "dword",
+    "reserved2": "dword",
+    "reserved3": "dword",
+    "reserved4": "dword",
+    "asndFile": {
+      "type": "array",
+      "ref_type": "AsndFileDataV2"
+    },
+    "reservedData": {
+      "type": "ptr",
+      "ref_type": "ReservedBankDataV2"
+    }
+  },
+  "SceneHingeJointV2": {
+    "bones": {
+      "type": "array",
+      "size": 2,
+      "ref_type": "dword"
+    },
+    "pivots": {
+      "type": "array",
+      "size": 2,
+      "ref_type": "float3"
+    },
+    "hinges": {
+      "type": "array",
+      "size": 2,
+      "ref_type": "float3"
+    },
+    "normals": {
+      "type": "array",
+      "size": 2,
+      "ref_type": "float3"
+    },
+    "limitMin": "float",
+    "limitMax": "float"
+  },
+  "SceneFilePhysicsV4": {
+    "shapeData": {
+      "type": "array",
+      "ref_type": "byte"
+    },
+    "shapes": {
+      "type": "array",
+      "ref_type": "SceneShapeV4"
+    },
+    "surfaces": {
+      "type": "array",
+      "ref_type": "SceneShapeSurfaceV4"
+    },
+    "collisionShapes": {
+      "type": "array",
+      "ref_type": "SceneCollisionShapeV4"
+    },
+    "triggerShapes": {
+      "type": "array",
+      "ref_type": "SceneTriggerShapeV4"
+    },
+    "namedShapes": {
+      "type": "array",
+      "ref_type": "SceneNamedShapeV4"
+    }
+  },
+  "ScenePathNodeV0": {
+    "position": "float3",
+    "rotation": "float4",
+    "radius": "float",
+    "flags": "dword"
+  },
+  "SceneJointV3": {
+    "bones": {
+      "type": "array",
+      "size": 2,
+      "ref_type": "dword"
+    },
+    "pivots": {
+      "type": "array",
+      "size": 2,
+      "ref_type": "float3"
+    },
+    "twists": {
+      "type": "array",
+      "size": 2,
+      "ref_type": "float3"
+    },
+    "planes": {
+      "type": "array",
+      "size": 2,
+      "ref_type": "float3"
+    },
+    "coneLimit": "float",
+    "planeMin": "float",
+    "planeMax": "float",
+    "twistMin": "float",
+    "twistMax": "float"
+  },
+  "PackAnimMachineActionV0": {
+    "actionData": {
+      "type": "array",
+      "size": 5,
+      "ref_type": "byte"
+    }
+  },
+  "PackAnimFallbacksV0": {
+    "fallbacks": {
+      "type": "array",
+      "ref_type": "PackAnimFallbackV0"
+    }
+  },
+  "ModelFileExpansionV0": {
+    "snapPoints": {
+      "type": "array",
+      "ref_type": "ModelFileSnapPointV0"
+    },
+    "snapPointPriority": "float",
+    "emitters": {
+      "type": "array",
+      "ref_type": "ModelExpansionEmitterV0"
+    }
+  },
+  "PackAnimSequenceStepMoveV0": {
+    "duration": "dword",
+    "moveRotation": "float4",
+    "facingRotation": "float4",
+    "velocity": "float2"
+  },
+  "SceneSphereShapeV5": {
+    "surface": "byte",
+    "center": "float3",
+    "radius": "float"
+  },
+  "ScenePathV5": {
+    "properties": {
+      "type": "array",
+      "ref_type": "qword"
+    },
+    "points": {
+      "type": "array",
+      "ref_type": "ScenePathNodeV5"
+    },
+    "closed": "byte"
+  },
+  "SceneHingeJointV3": {
+    "bones": {
+      "type": "array",
+      "size": 2,
+      "ref_type": "dword"
+    },
+    "pivots": {
+      "type": "array",
+      "size": 2,
+      "ref_type": "float3"
+    },
+    "hinges": {
+      "type": "array",
+      "size": 2,
+      "ref_type": "float3"
+    },
+    "normals": {
+      "type": "array",
+      "size": 2,
+      "ref_type": "float3"
+    },
+    "limitMin": "float",
+    "limitMax": "float"
+  },
+  "PackAnimMachineActionBlockV0": {
+    "actions": {
+      "type": "array",
+      "ref_type": "PackAnimMachineActionV0"
+    }
+  },
+  "ScenePathPhysicsV1": {
+    "pathData": {
+      "type": "array",
+      "ref_type": "float4"
+    }
+  },
+  "PackContent": {
+    "flags": "dword",
+    "typeInfos": {
+      "type": "array",
+      "ref_type": "PackContentTypeInfo"
+    },
+    "namespaces": {
+      "type": "array",
+      "ref_type": "PackContentNamespace"
+    },
+    "fileRefs": {
+      "type": "array",
+      "ref_type": "fileref"
+    },
+    "indexEntries": {
+      "type": "array",
+      "ref_type": "PackContentIndexEntry"
+    },
+    "localOffsets": {
+      "type": "array",
+      "ref_type": "PackContentLocalOffsetFixup"
+    },
+    "externalOffsets": {
+      "type": "array",
+      "ref_type": "PackContentExternalOffsetFixup"
+    },
+    "fileIndices": {
+      "type": "array",
+      "ref_type": "PackContentFileIndexFixup"
+    },
+    "stringIndices": {
+      "type": "array",
+      "ref_type": "PackContentStringIndexFixup"
+    },
+    "trackedReferences": {
+      "type": "array",
+      "ref_type": "PackContentTrackedReference"
+    },
+    "strings": {
+      "type": "array",
+      "ref_type": "wchar *"
+    },
+    "content": {
+      "type": "array",
+      "ref_type": "byte"
+    }
+  },
+  "SceneCollisionShapeV3": {
+    "shapeIndex": "dword"
+  },
+  "SceneJointV0": {
+    "bones": {
+      "type": "array",
+      "size": 2,
+      "ref_type": "dword"
+    },
+    "pivots": {
+      "type": "array",
+      "size": 2,
+      "ref_type": "float3"
+    },
+    "twists": {
+      "type": "array",
+      "size": 2,
+      "ref_type": "float3"
+    },
+    "planes": {
+      "type": "array",
+      "size": 2,
+      "ref_type": "float3"
+    },
+    "coneLimit": "float",
+    "planeMin": "float",
+    "planeMax": "float",
+    "twistMin": "float",
+    "twistMax": "float"
+  },
+  "SceneFilePhysicsV3": {
+    "shapeData": {
+      "type": "array",
+      "ref_type": "byte"
+    },
+    "shapes": {
+      "type": "array",
+      "ref_type": "SceneShapeV3"
+    },
+    "surfaces": {
+      "type": "array",
+      "ref_type": "SceneShapeSurfaceV3"
+    },
+    "collisionShapes": {
+      "type": "array",
+      "ref_type": "SceneCollisionShapeV3"
+    },
+    "triggerShapes": {
+      "type": "array",
+      "ref_type": "SceneTriggerShapeV3"
+    },
+    "namedShapes": {
+      "type": "array",
+      "ref_type": "SceneNamedShapeV3"
+    },
+    "paths": {
+      "type": "array",
+      "ref_type": "ScenePathPhysicsV3"
+    }
+  },
+  "PackAnimMachineStateVariantV1": {
+    "token": "qword",
+    "actionBlock": {
+      "type": "ptr",
+      "ref_type": "PackAnimMachineActionBlockV1"
+    },
+    "actionVariantBlock": {
+      "type": "ptr",
+      "ref_type": "PackAnimMachineActionVariantBlockV1"
+    },
+    "transitions": {
+      "type": "array",
+      "ref_type": "PackAnimMachineTransitionV1"
+    }
+  }
+}
