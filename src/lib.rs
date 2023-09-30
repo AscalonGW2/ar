@@ -3,6 +3,8 @@ use std::{collections::BTreeMap, fs::OpenOptions, path::Path};
 use bytemuck::{Pod, Zeroable};
 use memmap2::Mmap;
 
+mod pack;
+
 pub struct Archive {
     mmap: Mmap,
     index: BTreeMap<u32, MftEntry>,

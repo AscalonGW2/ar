@@ -1,6 +1,9 @@
 use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct TypeDefs(#[serde(with = "tuple_vec_map")] pub Vec<(String, TypeDef)>);
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct TypeDef(#[serde(with = "tuple_vec_map")] pub Vec<(String, Type)>);
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -28,12 +31,12 @@ pub enum TypeEnum {
     Float2,
     Float3,
     Float4,
-    Ptr,
+    Ref,
     Qword,
     #[serde(rename = "wchar *")]
-    WcharPtr,
+    WcharRef,
     #[serde(rename = "char *")]
-    CharPtr,
+    CharRef,
     Struct,
     Word,
     Guid,

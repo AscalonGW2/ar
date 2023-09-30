@@ -1,40 +1,44 @@
-use std::{collections::HashMap, fs::File};
+use std::fs::File;
 
 use byteorder::{ReadBytesExt, LE};
 use object::{pe::ImageSectionHeader, read::pe::PeFile64, Object};
 
-use ascalon_ar_def::{Type, TypeDef, TypeEnum};
+use ascalon_ar_def::{Type, TypeDef, TypeDefs, TypeEnum};
 
 fn main() {
     let mut image = std::fs::read(r#"C:\Program Files\Guild Wars 2\Gw2-64.exe"#).unwrap();
     let image = PeFile64::parse(image.as_slice()).unwrap();
+
+    let mut type_defs = Vec::new();
+
+    // Search the whole .rdata section
+    let base = image.relative_address_base();
     let section = image
         .section_table()
         .iter()
         .find(|section| section.name.as_slice() == b".rdata\0\0")
         .unwrap();
-
-    let mut type_defs = HashMap::new();
-
-    let base = image.relative_address_base();
     let mut data = section.pe_data(image.data()).unwrap();
     loop {
         if data.len() < 4 + 4 + 8 {
             break;
         }
 
+        // Pack chunk type has always 4 alphabetic characters
         let (name, mut test_data) = data.split_at(4);
         if !name.iter().all(|c| c.is_ascii_alphabetic()) {
             data = &data[1..];
             continue;
         }
 
+        // Type def count is never zero
         let type_def_count = test_data.read_u32::<LE>().unwrap();
         if type_def_count == 0 {
             data = &data[1..];
             continue;
         }
 
+        // Type defs rva has to be within the .rdata section
         let type_defs_rva = (test_data.read_u64::<LE>().unwrap() - base) as u32;
         let Some(mut type_defs_data) = section.pe_data_at(image.data(), type_defs_rva) else {
             data = &data[1..];
@@ -45,6 +49,7 @@ fn main() {
             continue;
         }
 
+        // Verify that all type defs are valid
         let mut test_type_defs_data = type_defs_data;
         if (0..type_def_count).any(|_| {
             let type_def_rva = (test_type_defs_data.read_u64::<LE>().unwrap() - base) as u32;
@@ -67,7 +72,8 @@ fn main() {
         data = &data[4 + 4 + 8..];
     }
 
-    serde_json::to_writer_pretty(File::create("packfile.json").unwrap(), &type_defs).unwrap();
+    serde_json::to_writer_pretty(File::create("packfile.json").unwrap(), &TypeDefs(type_defs))
+        .unwrap();
 }
 
 fn generate_type_def(
@@ -75,7 +81,7 @@ fn generate_type_def(
     image: &[u8],
     section: &ImageSectionHeader,
     rva: u32,
-    type_defs: &mut HashMap<String, TypeDef>,
+    type_defs: &mut Vec<(String, TypeDef)>,
 ) -> String {
     let mut data = section.pe_data_at(image, rva).unwrap();
     let mut fields = vec![];
@@ -120,13 +126,13 @@ fn generate_type_def(
                 14 => Type::Type(TypeEnum::Float3),
                 15 => Type::Type(TypeEnum::Float4),
                 16 => Type::RefType {
-                    r#type: TypeEnum::Ptr,
+                    r#type: TypeEnum::Ref,
                     size: None,
                     ref_type: generate_type_def(base, image, section, type_def_rva, type_defs),
                 },
                 17 => Type::Type(TypeEnum::Qword),
-                18 => Type::Type(TypeEnum::WcharPtr),
-                19 => Type::Type(TypeEnum::CharPtr),
+                18 => Type::Type(TypeEnum::WcharRef),
+                19 => Type::Type(TypeEnum::CharRef),
                 20 => Type::RefType {
                     r#type: TypeEnum::Struct,
                     size: None,
@@ -148,6 +154,11 @@ fn generate_type_def(
             },
         ));
     };
-    type_defs.insert(name.clone(), TypeDef(fields));
+
+    // Slow but the order is preserved
+    if type_defs.iter().all(|type_def| type_def.0 != name) {
+        type_defs.push((name.clone(), TypeDef(fields)));
+    }
+
     name
 }

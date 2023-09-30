@@ -1,6 +1,7 @@
 [workspace]
 members = [
     "def",
+    "gen",
 ]
 resolver = "2"
 
