@@ -3,7 +3,7 @@ use std::fs::File;
 use byteorder::{ReadBytesExt, LE};
 use object::{pe::ImageSectionHeader, read::pe::PeFile64, Object};
 
-use ascalon_ar_def::{Type, TypeDef, TypeDefs, TypeEnum};
+use ascalon_ar_def::{FieldType, Type, Type2, TypeDef, TypeDefs};
 
 fn main() {
     let mut image = std::fs::read(r#"C:\Program Files\Guild Wars 2\Gw2-64.exe"#).unwrap();
@@ -11,7 +11,7 @@ fn main() {
 
     let mut type_defs = Vec::new();
 
-    // Search the whole .rdata section
+    // search the whole .rdata section
     let base = image.relative_address_base();
     let section = image
         .section_table()
@@ -24,21 +24,21 @@ fn main() {
             break;
         }
 
-        // Pack chunk type has always 4 alphabetic characters
+        // pack chunk type has always 4 alphabetic characters
         let (name, mut test_data) = data.split_at(4);
         if !name.iter().all(|c| c.is_ascii_alphabetic()) {
             data = &data[1..];
             continue;
         }
 
-        // Type def count is never zero
+        // type def count is never zero
         let type_def_count = test_data.read_u32::<LE>().unwrap();
         if type_def_count == 0 {
             data = &data[1..];
             continue;
         }
 
-        // Type defs rva has to be within the .rdata section
+        // type defs rva has to be within the .rdata section
         let type_defs_rva = (test_data.read_u64::<LE>().unwrap() - base) as u32;
         let Some(mut type_defs_data) = section.pe_data_at(image.data(), type_defs_rva) else {
             data = &data[1..];
@@ -49,7 +49,7 @@ fn main() {
             continue;
         }
 
-        // Verify that all type defs are valid
+        // verify that all type defs are valid
         let mut test_type_defs_data = type_defs_data;
         if (0..type_def_count).any(|_| {
             let type_def_rva = (test_type_defs_data.read_u64::<LE>().unwrap() - base) as u32;
@@ -106,47 +106,47 @@ fn generate_type_def(
         fields.push((
             name.clone(),
             match r#type {
-                1 => Type::RefType {
-                    r#type: TypeEnum::Array,
+                1 => FieldType::Type2 {
+                    r#type: Type2::Array,
                     size: Some(size as u32),
                     ref_type: generate_type_def(base, image, section, type_def_rva, type_defs),
                 },
-                2 => Type::RefType {
-                    r#type: TypeEnum::Array,
+                2 => FieldType::Type2 {
+                    r#type: Type2::Array,
                     size: None,
                     ref_type: generate_type_def(base, image, section, type_def_rva, type_defs),
                 },
-                5 => Type::Type(TypeEnum::Byte),
-                6 => Type::Type(TypeEnum::Byte4),
-                7 => Type::Type(TypeEnum::Double),
-                10 => Type::Type(TypeEnum::Dword),
-                11 => Type::Type(TypeEnum::Filename),
-                12 => Type::Type(TypeEnum::Float),
-                13 => Type::Type(TypeEnum::Float2),
-                14 => Type::Type(TypeEnum::Float3),
-                15 => Type::Type(TypeEnum::Float4),
-                16 => Type::RefType {
-                    r#type: TypeEnum::Ref,
+                5 => FieldType::Type(Type::Byte),
+                6 => FieldType::Type(Type::Byte4),
+                7 => FieldType::Type(Type::Double),
+                10 => FieldType::Type(Type::Dword),
+                11 => FieldType::Type(Type::Filename),
+                12 => FieldType::Type(Type::Float),
+                13 => FieldType::Type(Type::Float2),
+                14 => FieldType::Type(Type::Float3),
+                15 => FieldType::Type(Type::Float4),
+                16 => FieldType::Type2 {
+                    r#type: Type2::Ref,
                     size: None,
                     ref_type: generate_type_def(base, image, section, type_def_rva, type_defs),
                 },
-                17 => Type::Type(TypeEnum::Qword),
-                18 => Type::Type(TypeEnum::WcharRef),
-                19 => Type::Type(TypeEnum::CharRef),
-                20 => Type::RefType {
-                    r#type: TypeEnum::Struct,
+                17 => FieldType::Type(Type::Qword),
+                18 => FieldType::Type(Type::WcharRef),
+                19 => FieldType::Type(Type::CharRef),
+                20 => FieldType::Type2 {
+                    r#type: Type2::Struct,
                     size: None,
                     ref_type: generate_type_def(base, image, section, type_def_rva, type_defs),
                 },
-                21 => Type::Type(TypeEnum::Word),
-                22 => Type::Type(TypeEnum::Guid),
-                23 => Type::Type(TypeEnum::Byte3),
-                24 => Type::Type(TypeEnum::Dword2),
-                25 => Type::Type(TypeEnum::Dword4),
-                26 => Type::Type(TypeEnum::Word3),
-                27 => Type::Type(TypeEnum::Fileref),
-                28 => Type::RefType {
-                    r#type: TypeEnum::Array,
+                21 => FieldType::Type(Type::Word),
+                22 => FieldType::Type(Type::Guid),
+                23 => FieldType::Type(Type::Byte3),
+                24 => FieldType::Type(Type::Dword2),
+                25 => FieldType::Type(Type::Dword4),
+                26 => FieldType::Type(Type::Word3),
+                27 => FieldType::Type(Type::Fileref),
+                28 => FieldType::Type2 {
+                    r#type: Type2::Array,
                     size: Some(size as u32),
                     ref_type: "byte".to_string(),
                 },
@@ -155,8 +155,11 @@ fn generate_type_def(
         ));
     };
 
-    // Slow but the order is preserved
-    if type_defs.iter().all(|type_def| type_def.0 != name) {
+    // check if type def already exists (slow but the order is preserved) and ignore
+    // wrapper type defs
+    if (fields.len() != 1 || !fields[0].0.is_empty())
+        && type_defs.iter().all(|type_def| type_def.0 != name)
+    {
         type_defs.push((name.clone(), TypeDef(fields)));
     }
 

@@ -3,7 +3,7 @@ use std::marker::PhantomData;
 use bytemuck::Pod;
 
 #[repr(C, packed)]
-struct Array<T> {
+pub struct Array<T> {
     count: u32,
     offset: u64,
     _phantom: PhantomData<T>,
@@ -21,12 +21,12 @@ impl<T: Pod> Array<T> {
 }
 
 #[repr(C, packed)]
-struct Filename {
+pub struct Filename {
     offset: u64,
 }
 
 #[repr(C, packed)]
-struct Ref<T> {
+pub struct Ref<T> {
     offset: u64,
     _phantom: PhantomData<T>,
 }
@@ -43,7 +43,7 @@ impl<T: Pod> Ref<T> {
 }
 
 #[repr(C, packed)]
-struct WcharRef {
+pub struct WcharRef {
     offset: u64,
 }
 
@@ -54,7 +54,7 @@ impl WcharRef {
 }
 
 #[repr(C, packed)]
-struct CharRef {
+pub struct CharRef {
     offset: u64,
 }
 
@@ -63,3 +63,9 @@ impl CharRef {
         "".to_string()
     }
 }
+
+pub struct Uuid;
+
+pub struct Fileref;
+
+include!(concat!(env!("OUT_DIR"), "/packfile.rs"));

@@ -3,7 +3,7 @@ use std::{collections::BTreeMap, fs::OpenOptions, path::Path};
 use bytemuck::{Pod, Zeroable};
 use memmap2::Mmap;
 
-mod pack;
+pub mod pack;
 
 pub struct Archive {
     mmap: Mmap,
@@ -62,7 +62,7 @@ impl Archive {
             return None;
         };
 
-        let mut data = &self.mmap[entry.offset as usize..][..entry.size as usize];
+        let data = &self.mmap[entry.offset as usize..][..entry.size as usize];
         if entry.extra_bytes != 8 {
             return None;
         }

@@ -4,24 +4,23 @@ use serde::{Deserialize, Serialize};
 pub struct TypeDefs(#[serde(with = "tuple_vec_map")] pub Vec<(String, TypeDef)>);
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-pub struct TypeDef(#[serde(with = "tuple_vec_map")] pub Vec<(String, Type)>);
+pub struct TypeDef(#[serde(with = "tuple_vec_map")] pub Vec<(String, FieldType)>);
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum Type {
-    RefType {
-        r#type: TypeEnum,
+pub enum FieldType {
+    Type(Type),
+    Type2 {
+        r#type: Type2,
         #[serde(skip_serializing_if = "Option::is_none")]
         size: Option<u32>,
         ref_type: String,
     },
-    Type(TypeEnum),
 }
 
 #[derive(Debug, Clone, Eq, PartialEq, Serialize, Deserialize)]
 #[serde(rename_all = "lowercase")]
-pub enum TypeEnum {
-    Array,
+pub enum Type {
     Byte,
     Byte4,
     Double,
@@ -31,13 +30,11 @@ pub enum TypeEnum {
     Float2,
     Float3,
     Float4,
-    Ref,
     Qword,
     #[serde(rename = "wchar *")]
     WcharRef,
     #[serde(rename = "char *")]
     CharRef,
-    Struct,
     Word,
     Guid,
     Byte3,
@@ -45,4 +42,12 @@ pub enum TypeEnum {
     Dword4,
     Word3,
     Fileref,
+}
+
+#[derive(Debug, Clone, Eq, PartialEq, Serialize, Deserialize)]
+#[serde(rename_all = "lowercase")]
+pub enum Type2 {
+    Array,
+    Ref,
+    Struct,
 }

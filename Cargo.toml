@@ -13,3 +13,6 @@ edition = "2021"
 [dependencies]
 bytemuck = { version = "1.14.0", features = ["derive"] }
 memmap2 = "0.8.0"
+
+[build-dependencies]
+ascalon_ar_gen = { path = "gen" }

@@ -1,7 +1,4 @@
 {
-  "filename": {
-    "": "filename"
-  },
   "TextPackLanguage": {
     "filenames": {
       "type": "array",
@@ -36,9 +33,6 @@
       "ref_type": "TextPackVoice"
     }
   },
-  "dword": {
-    "": "dword"
-  },
   "TextPackVariant": {
     "textId": "dword",
     "variantTextIds": {
@@ -51,9 +45,6 @@
       "type": "array",
       "ref_type": "TextPackVariant"
     }
-  },
-  "byte": {
-    "": "byte"
   },
   "AsndFileDataV0": {
     "voiceId": "dword",
@@ -164,9 +155,6 @@
       "type": "array",
       "ref_type": "dword"
     }
-  },
-  "dword4": {
-    "": "dword4"
   },
   "PackMapLayer": {
     "layerId": "dword",
@@ -378,9 +366,6 @@
       "ref_type": "byte"
     }
   },
-  "qword": {
-    "": "qword"
-  },
   "MapSurfaces": {
     "chunkData": {
       "type": "array",
@@ -591,9 +576,6 @@
   "SceneNamedShapeV1": {
     "shapeIndex": "dword"
   },
-  "float4": {
-    "": "float4"
-  },
   "ScenePathPhysicsV1": {
     "pathData": {
       "type": "array",
@@ -788,12 +770,6 @@
     "surface": "byte",
     "center": "float3",
     "radius": "float"
-  },
-  "word": {
-    "": "word"
-  },
-  "float3": {
-    "": "float3"
   },
   "SceneMeshShapeV5": {
     "surfaces": {
@@ -2280,9 +2256,6 @@
       "ref_type": "byte"
     }
   },
-  "float": {
-    "": "float"
-  },
   "CollideModelManifestFile": {
     "modelFile": "fileref",
     "collisionFile": "fileref",
@@ -2647,9 +2620,6 @@
     "domain": "dword",
     "parentIndex": "dword"
   },
-  "fileref": {
-    "": "fileref"
-  },
   "PackContentIndexEntry": {
     "type": "dword",
     "offset": "dword",
@@ -2673,9 +2643,6 @@
     "sourceOffset": "dword",
     "targetFileIndex": "dword",
     "targetOffset": "dword"
-  },
-  "wchar *": {
-    "": "wchar *"
   },
   "PackContent": {
     "flags": "dword",
